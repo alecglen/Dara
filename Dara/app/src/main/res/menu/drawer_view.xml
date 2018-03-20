@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/grp1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/new_req"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="@string/new_request" />
+        <item
+            android:id="@+id/new_trip"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="@string/new_trip" />
+        <item
+            android:id="@+id/notifications"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="@string/notifications" />
+    </group>
+    <group android:id="@+id/grp2" android:checkableBehavior="single">
+        <item
+            android:id="@+id/become_carrier"
+            android:title="@string/become_a_carrier" />
+        <item
+            android:id="@+id/payment"
+            android:title="@string/payment" />
+        <item
+            android:id="@+id/reviews"
+            android:title="@string/review" />
+    </group>
+    <group android:id="@+id/grp3" android:checkableBehavior="single">
+        <item
+            android:id="@+id/help"
+            android:title="@string/help" />
+        <item
+            android:id="@+id/legal"
+            android:title="@string/legal" />
+        <item
+            android:id="@+id/logout"
+            android:title="@string/logout" />
+    </group>
+</menu>
