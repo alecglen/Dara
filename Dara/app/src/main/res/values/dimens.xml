@@ -7,4 +7,5 @@
     <dimen name="home_new_buttons">160dp</dimen>
     <dimen name="profile_image">96dp</dimen>
     <dimen name="list_length">384dp</dimen>
+    <dimen name="dividers">1dp</dimen>
 </resources>
