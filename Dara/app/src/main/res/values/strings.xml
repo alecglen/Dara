@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Dara</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings related to Home Screen -->
     <string name="title_activity_home_screen">Dara</string>
     <string name="tab_text_1">Sender</string>
     <string name="tab_text_2">Carrier</string>
@@ -10,6 +9,9 @@
     <string name="button_carrier_home">New Trip</string>
     <string name="requests_label">My Requests</string>
     <string name="trips_label">My Trips</string>
+    <string name="empty_reqs">No Requests Yet!</string>
+
+    <!-- Strings for Hamburger Menu -->
     <string name="new_request">New request</string>
     <string name="new_trip">New trip</string>
     <string name="notifications">Notifications</string>
@@ -22,5 +24,22 @@
     <string name="profile_content_descr">Profile Image</string>
     <string name="name">Name</string>
     <string name="email">Email</string>
-    <string name="empty_reqs">No Requests Yet!</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."</string>
+    <string name="facebook_app_id">1120060238165241</string>
+    <string name="fb_login_protocol_scheme">fb1120060238165241</string>
+    <string name="logo_content">Dara logo</string>
+    <string name="login_or">or sign in with</string>
+    <string name="login_google">google</string>
 </resources>
