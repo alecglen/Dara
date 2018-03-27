@@ -4,23 +4,22 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
-
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -30,6 +29,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,12 +52,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private static final int REQUEST_READ_CONTACTS = 0;
 
     /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
+     * Variables to Alec's WAMP server to authenticate user and grab profile info
      */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
-    };
+    // Creating JSON Parser object
+    JSONParser jParser = new JSONParser();
+
+    // JSON Node names
+    private static final String TAG_SUCCESS = "success";
+    private static final String TAG_USER = "user";
+    private static final String TAG_PWD = "pass";
+
+    // products JSONArray
+    JSONArray user = null;
+    JSONObject userRow;
+
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -304,21 +317,53 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
 
-            try {
-                // Simulate network access.
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                return false;
-            }
-
-            if (mEmail.equals("alec.ostrander@gmail.com")) {
+            /*
+             * Dev user without need for server connection
+              */
+            if (mEmail.equals("dev@dara.com")) {
                 // Account exists, return true if the password matches.
                 return mPassword.equals("testpass");
             }
 
-            // TODO: register the new account here.
+            /*
+             * Getting product details in background thread
+             * */
+            // Check for success tag
+            try {
+                // Building query parameter
+                List<NameValuePair> jparams = new ArrayList<>();
+                jparams.add(new BasicNameValuePair("email", "\""+mEmail+"\""));
+
+                // getting product details by making HTTP request
+                // Note that product details url will use GET request
+                String url_get_user = "http://10.26.195.27/android_connect/get_user_row.php";
+                JSONObject json = jParser.makeHttpRequest(url_get_user, "GET", jparams);
+
+                // check your log for json response
+                Log.d("Single User Details", json.toString());
+
+                // json success tag
+                int success = json.getInt(TAG_SUCCESS);
+                if (success == 1) {
+                    // successfully received user details
+                    user = json.getJSONArray(TAG_USER); // JSON Array
+
+                    // get first user object from JSON Array
+                    userRow = user.getJSONObject(0);
+
+                    // get user's password
+                    String user_pass = userRow.getString(TAG_PWD);
+
+                    // Compare password to stored password
+                    return mPassword.equals(user_pass);
+
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            // Else no user with given email found
             return false;
         }
 

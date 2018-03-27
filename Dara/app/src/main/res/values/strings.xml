@@ -42,4 +42,5 @@
     <string name="logo_content">Dara logo</string>
     <string name="login_or">or sign in with</string>
     <string name="login_google">google</string>
+    <string name="new_user">New user? Sign up here.</string>
 </resources>
