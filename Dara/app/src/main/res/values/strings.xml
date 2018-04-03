@@ -50,4 +50,9 @@
     <string name="title_activity_cargo_size">CargoSize</string>
     <string name="title_activity_cargo_size_b">CargoSizeB</string>
     <string name="title_activity_negotiation">NegotiationActivity</string>
+
+    <!-- Strings for Negotiation -->
+    <string name="current_offer">CurrentOffer</string>
+    <string name="second_most_recent_offer">2nd Recent Offer</string>
+    <string name="third_most_recent_offer">3rd Recent Offer</string>
 </resources>

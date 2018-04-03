@@ -47,17 +47,10 @@
                 android:value="com.example.test.dara.LoginActivity" />
         </activity>
         <activity
-            android:name=".CargoSize"
-            android:label="@string/title_activity_cargo_size"
-            android:theme="@style/MyMaterialTheme" />
-        <activity
-            android:name=".CargoSizeB"
-            android:label="@string/title_activity_cargo_size_b"
-            android:theme="@style/MyMaterialTheme" />
-        <activity
             android:name=".NegotiationActivity"
             android:label="@string/title_activity_negotiation"
-            android:theme="@style/MyMaterialTheme"></activity>
+            android:theme="@style/MyMaterialTheme" />
+        <activity android:name=".CargoSize"></activity>
     </application>
 
 </manifest>
