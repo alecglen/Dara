@@ -28,7 +28,7 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -43,4 +43,11 @@
     <string name="login_or">or sign in with</string>
     <string name="login_google">google</string>
     <string name="new_user">New user? Sign up here.</string>
+    <string name="title_activity_create_account">Sign in</string>
+    <string name="Register">Register</string>
+    <string name="Name">Name</string>
+    <string name="join_us">Join Us!</string>
+    <string name="title_activity_cargo_size">CargoSize</string>
+    <string name="title_activity_cargo_size_b">CargoSizeB</string>
+    <string name="title_activity_negotiation">NegotiationActivity</string>
 </resources>
