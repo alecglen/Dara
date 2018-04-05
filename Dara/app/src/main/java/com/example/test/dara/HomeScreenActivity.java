@@ -24,15 +24,18 @@ public class HomeScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Loading page
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
+        // Setting up pager between tab fragments
         ViewPager pager = findViewById(R.id.container);
         setupPager(pager);
-
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(pager);
 
+        // Setting up tabs
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
@@ -40,9 +43,9 @@ public class HomeScreenActivity extends AppCompatActivity {
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
+        // Setting up hamburger
         burgerMenu = findViewById(R.id.drawer_layout);
         NavigationView navView = findViewById(R.id.nav_view);
-
         navView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override

@@ -1,6 +1,7 @@
 package com.example.test.dara;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -10,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 
 /**
@@ -35,7 +35,8 @@ public class SenderHomeFragment extends Fragment {
         newReq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Testing New Request Button", Toast.LENGTH_SHORT).show();
+                Intent myIntent = new Intent(getActivity(), NewReqActivity.class);
+                getActivity().startActivity(myIntent);
             }
         });
 

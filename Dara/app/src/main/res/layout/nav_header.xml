@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="144dp"
     android:background="?attr/colorPrimaryDark"
@@ -8,16 +9,19 @@
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="@dimen/profile_image"
-        android:layout_height="@dimen/profile_image"
-        android:src="@mipmap/ic_profile_image" />
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="Profile image"
+        app:srcCompat="@drawable/roundbutton" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
+        android:layout_weight="1"
         android:gravity="bottom|start"
         android:orientation="vertical">
 

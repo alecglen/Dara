@@ -43,4 +43,8 @@
     <string name="login_or">or sign in with</string>
     <string name="login_google">google</string>
     <string name="new_user">New user? Sign up here.</string>
+    <string name="title">Title</string>
+    <string name="profile_img">Profile Image</string>
+    <string name="img_upload">Upload Image</string>
+    <string name="title_activity_new_req">New Request</string>
 </resources>
