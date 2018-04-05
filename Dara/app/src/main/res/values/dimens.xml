@@ -8,4 +8,5 @@
     <dimen name="profile_image">96dp</dimen>
     <dimen name="list_length">384dp</dimen>
     <dimen name="dividers">1dp</dimen>
+    <dimen name="actionBarSize">20dp</dimen>
 </resources>
