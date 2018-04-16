@@ -65,7 +65,8 @@
             android:theme="@style/MyMaterialTheme" />
         <activity android:name=".CargoSize" />
         <activity android:name=".TutorialActivity" />
-        <activity android:name=".ProfileView"></activity>
+        <activity android:name=".ProfileView" />
+        <activity android:name=".profileSparse"></activity>
     </application>
 
 </manifest>
