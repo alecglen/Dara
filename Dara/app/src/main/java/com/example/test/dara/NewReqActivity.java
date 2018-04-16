@@ -3,7 +3,6 @@ package com.example.test.dara;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class NewReqActivity extends AppCompatActivity {
@@ -16,8 +15,9 @@ public class NewReqActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // Populate attributes list
-        String[] attributes = {"Pickup Location", "Destination", "Item Description", "Due Date"};
-        ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.job_lists, attributes);
+        String[] attributes = {"Pick-up Location@@@Not Set", "Drop-off Location@@@Not Set",
+                "Item Description@@@Not Set", "Initial Offer@@@Not Set", "Due Date@@@Not Set"};
+        RequestsAdapter adapter = new RequestsAdapter(this, R.layout.job_lists, attributes);
         ListView listView = findViewById(R.id.listView2);
         listView.setAdapter(adapter);
     }

@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -40,9 +39,8 @@ public class CarrierHomeFragment extends Fragment {
         });
 
         // Populate Requests list
-        String[] requests = {"No trips yet!"};
-        //noinspection ConstantConditions
-        @SuppressWarnings("ConstantConditions") ArrayAdapter adapter = new ArrayAdapter<>(getActivity(),R.layout.job_lists,requests);
+        String[] requests = {"No trips yet!@@@ "};
+        RequestsAdapter adapter = new RequestsAdapter(getActivity(), R.layout.job_lists, requests);
         ListView listView = view.findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
