@@ -75,4 +75,5 @@
     <string name="Tutorial_6_text">…and help you come to a fair delivery cost!</string>
     <string name="Tutorial_7_text">Stay connected during delivery with in-app messaging and check-ins.</string>
     <string name="TutorialEndButtonText">Let\'s get started!</string>
+    <string name="title_activity_anchor">Anchor</string>
 </resources>
