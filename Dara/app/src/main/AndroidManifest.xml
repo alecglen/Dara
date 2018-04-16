@@ -41,7 +41,7 @@
         <activity
             android:name=".HomeScreenActivity"
             android:label="@string/title_activity_home_screen"
-            android:theme="@style/MyMaterialTheme"></activity>
+            android:theme="@style/MyMaterialTheme" />
         <activity
             android:name=".CreateAccountActivity"
             android:label="@string/title_activity_create_account"
@@ -62,9 +62,11 @@
         <activity
             android:name=".Anchor"
             android:label="@string/title_activity_anchor"
-            android:theme="@style/MyMaterialTheme"></activity>
+            android:theme="@style/MyMaterialTheme" />
         <activity android:name=".CargoSize" />
-        <activity android:name=".TutorialActivity"></activity>
+        <activity android:name=".TutorialActivity" />
+        <activity android:name=".ProfileView" />
+        <activity android:name=".profileSparse"></activity>
     </application>
 
 </manifest>
