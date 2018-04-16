@@ -67,7 +67,8 @@
         <activity android:name=".TutorialActivity" />
         <activity android:name=".ProfileView" />
         <activity android:name=".profileSparse" />
-        <activity android:name=".newTrip"></activity>
+        <activity android:name=".newTrip" />
+        <activity android:name=".InitialOffer"></activity>
     </application>
 
 </manifest>
