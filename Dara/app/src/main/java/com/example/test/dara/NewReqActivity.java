@@ -16,7 +16,7 @@ public class NewReqActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // Populate attributes list
-        String[] attributes = {"Pickup Location", "Destination", "Item Description", "Due Date"};
+        String[] attributes = {"Pickup Location", "Destination", "Item Description", "Initial Offer", "Due Date"};
         ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.job_lists, attributes);
         ListView listView = findViewById(R.id.listView2);
         listView.setAdapter(adapter);
