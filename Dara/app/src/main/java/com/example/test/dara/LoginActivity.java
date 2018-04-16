@@ -348,7 +348,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                 // getting product details by making HTTP request
                 // Note that product details url will use GET request
-                String url_get_user = "http://10.26.195.27/android_connect/get_user_row.php";
+                String url_get_user = "http://10.29.189.43/android_connect/get_user_row.php";
                 JSONObject json = jParser.makeHttpRequest(url_get_user, "GET", jparams);
 
                 // check your log for json response

@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -39,7 +42,7 @@ public class SenderHomeFragment extends Fragment {
         });
 
         // Populate Requests list
-        String[] requests = {"No requests yet!@@@ "};
+        ArrayList<String> requests = new ArrayList<>(Collections.singleton("No requests yet!@@@Select New Request to get started."));
         RequestsAdapter adapter = new RequestsAdapter(getActivity(),R.layout.job_lists,requests);
         ListView listView = view.findViewById(R.id.reqs_list);
         listView.setAdapter(adapter);

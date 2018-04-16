@@ -9,14 +9,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 class RequestsAdapter extends BaseAdapter {
 
     private Context mContext;
     private int mResource;
-    private String[] mAttributes;
+    private ArrayList<String> mAttributes;
 
-    RequestsAdapter(Context context, int resource, String[] attributes) {
+    RequestsAdapter(Context context, int resource, ArrayList<String> attributes) {
         super();
         mContext = context;
         mResource = resource;
@@ -25,13 +27,13 @@ class RequestsAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return mAttributes.length;
+        return mAttributes.size();
     }
 
     @Nullable
     @Override
     public Object getItem(int position) {
-        return mAttributes[position];
+        return mAttributes.get(position);
     }
 
     @Override
@@ -51,7 +53,8 @@ class RequestsAdapter extends BaseAdapter {
         }
 
         // Get list item content
-        String[] attrs = mAttributes[pos].split("@@@");
+        String item = mAttributes.get(pos);
+        String[] attrs = item.split("@@@");
         String title = attrs[0];
         String status = attrs[1];
 
@@ -62,5 +65,13 @@ class RequestsAdapter extends BaseAdapter {
         tv2.setText(status);
 
         return convertView;
+    }
+
+    public void updateRequests(ArrayList<Request> requests) {
+        mAttributes.clear();
+        for (int i=0; i<requests.size(); i++) {
+            Request r = requests.get(i);
+            mAttributes.add(r.getEnd() + "@@@" + Integer.toString(r.getCreationDate()));
+        }
     }
 }

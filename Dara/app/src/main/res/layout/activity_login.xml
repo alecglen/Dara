@@ -117,7 +117,7 @@
                 android:id="@+id/login_or"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/login_or"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimaryDark"
@@ -125,45 +125,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email_sign_in_button" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout2"
+            <com.shobhitpuri.custombuttons.GoogleSignInButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:text="@string/login_google"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/login_or">
-
-                <com.facebook.login.widget.LoginButton
-                    android:id="@+id/facebook_login_button"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_weight="1"
-                    android:paddingBottom="11dp"
-                    android:paddingTop="11dp"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:com_facebook_login_text="    facebook" />
-
-                <com.shobhitpuri.custombuttons.GoogleSignInButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight="1"
-                    android:paddingBottom="6dp"
-                    android:paddingTop="6dp"
-                    android:text="@string/login_google"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
-
-            </LinearLayout>
+                app:layout_constraintTop_toBottomOf="@+id/login_or" />
 
             <Button
                 android:id="@+id/sign_up_button"
@@ -178,8 +157,7 @@
                 android:textColor="@color/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                app:layout_constraintStart_toStartOf="parent"/>
 
         </android.support.constraint.ConstraintLayout>
     </android.support.constraint.ConstraintLayout>
