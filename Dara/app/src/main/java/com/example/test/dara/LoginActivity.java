@@ -105,13 +105,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        // Make button lead to the New Request interface
+        // Make button lead to the Tutorial
         Button newUser = findViewById(R.id.sign_up_button);
         newUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(LoginActivity.this,CreateAccountActivity.class);
+                Intent myIntent = new Intent(LoginActivity.this, TutorialActivity.class);
                 LoginActivity.this.startActivity(myIntent);
+
             }});
 
 

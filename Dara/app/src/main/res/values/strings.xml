@@ -59,4 +59,20 @@
     <string name="current_offer">CurrentOffer</string>
     <string name="second_most_recent_offer">2nd Recent Offer</string>
     <string name="third_most_recent_offer">3rd Recent Offer</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="skipbutton">Skip</string>
+
+    <!-- Strings for Tutorial -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Tutorial_1_text">What is Dara?\n\nDara is a peer-to-peer shipping service.</string>
+    <string name="Tutorial_2_text">Dara pairs senders with others traveling to the delivery location.</string>
+    <string name="tut2_image_text">tutorial 2 image</string>
+    <string name="Tutorial_3_text">As a sender, Dara will find you verified carriers based on your item\'s size and delivery date.</string>
+    <string name="Tutorial_4_text">As a carrier, you can select parcels to deliver based on your travel itinerary.</string>
+    <string name="Tutorial_5_text">Dara will match you with verified users…</string>
+    <string name="Tutorial_6_text">…and help you come to a fair delivery cost!</string>
+    <string name="Tutorial_7_text">Stay connected during delivery with in-app messaging and check-ins.</string>
+    <string name="TutorialEndButtonText">Let\'s get started!</string>
 </resources>

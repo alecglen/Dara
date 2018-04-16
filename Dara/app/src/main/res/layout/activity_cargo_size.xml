@@ -34,49 +34,70 @@
         android:id="@+id/imageView"
         android:layout_width="86dp"
         android:layout_height="86dp"
-        app:srcCompat="@drawable/ic_suitcase"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="224dp" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/ic_suitcase" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="70dp"
         android:layout_height="59dp"
-        app:srcCompat="@drawable/wallet"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="405dp" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/wallet" />
 
     <RadioButton
         android:id="@+id/radioButton"
         android:layout_width="88dp"
         android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="L"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        tools:layout_editor_absoluteX="201dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <RadioButton
         android:id="@+id/radioButton2"
         android:layout_width="85dp"
         android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:text="XS"
-        tools:layout_editor_absoluteX="193dp"
-        tools:layout_editor_absoluteY="429dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="99dp"
         android:layout_height="91dp"
-        app:srcCompat="@drawable/ic_sofa"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="78dp" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_sofa" />
 
     <RadioButton
         android:id="@+id/radioButton3"
         android:layout_width="63dp"
         android:layout_height="29dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:text="XL"
-        tools:layout_editor_absoluteX="201dp"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
 </android.support.constraint.ConstraintLayout>
