@@ -76,4 +76,5 @@
     <string name="Tutorial_7_text">Stay connected during delivery with in-app messaging and check-ins.</string>
     <string name="TutorialEndButtonText">Let\'s get started!</string>
     <string name="title_activity_anchor">Anchor</string>
+    <string name="request_item_name">Item name</string>
 </resources>
