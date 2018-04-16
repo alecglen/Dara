@@ -29,8 +29,7 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
-            android:label="@string/title_activity_home_screen" />
-
+        android:label="@string/title_activity_home_screen" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -54,12 +53,16 @@
         <activity
             android:name=".NewReqActivity"
             android:label="@string/title_activity_new_req"
-            android:theme="@style/MyMaterialTheme"></activity>
+            android:theme="@style/MyMaterialTheme" />
         <activity
             android:name=".NegotiationActivity"
             android:label="@string/title_activity_negotiation"
             android:theme="@style/MyMaterialTheme" />
-        <activity android:name=".CargoSize"></activity>
+        <activity android:name=".CargoSize" />
+        <activity
+            android:name=".Anchor"
+            android:label="@string/title_activity_anchor"
+            android:theme="@style/MyMaterialTheme"></activity>
     </application>
 
 </manifest>

@@ -59,4 +59,5 @@
     <string name="current_offer">CurrentOffer</string>
     <string name="second_most_recent_offer">2nd Recent Offer</string>
     <string name="third_most_recent_offer">3rd Recent Offer</string>
+    <string name="title_activity_anchor">Anchor</string>
 </resources>
