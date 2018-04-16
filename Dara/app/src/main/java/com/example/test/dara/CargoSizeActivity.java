@@ -3,7 +3,7 @@ package com.example.test.dara;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CargoSize extends AppCompatActivity {
+public class CargoSizeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
