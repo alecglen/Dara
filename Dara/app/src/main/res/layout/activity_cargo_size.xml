@@ -11,9 +11,9 @@
         android:layout_width="479dp"
         android:layout_height="76dp"
         android:background="@color/colorPrimary"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-78dp"
-        tools:layout_editor_absoluteY="-17dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="-17dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -23,60 +23,82 @@
         android:layout_marginLeft="56dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="16dp"
-        android:text="Cargo Size"
+        android:text="@string/title_activity_cargo_size"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Cargo Size" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="86dp"
         android:layout_height="86dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
         app:srcCompat="@drawable/ic_suitcase"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="224dp" />
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="70dp"
         android:layout_height="59dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/wallet"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="405dp" />
+        tools:layout_editor_absoluteX="83dp"
+        tools:ignore="ContentDescription"/>
 
     <RadioButton
         android:id="@+id/radioButton"
-        android:layout_width="88dp"
-        android:layout_height="32dp"
+        android:layout_width="58dp"
+        android:layout_height="36dp"
         android:text="L"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        tools:layout_editor_absoluteX="201dp" />
+        app:layout_constraintStart_toStartOf="@+id/radioButton2"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <RadioButton
         android:id="@+id/radioButton2"
-        android:layout_width="85dp"
-        android:layout_height="34dp"
+        android:layout_width="62dp"
+        android:layout_height="33dp"
         android:text="XS"
-        tools:layout_editor_absoluteX="193dp"
-        tools:layout_editor_absoluteY="429dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        tools:layout_editor_absoluteX="226dp" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="99dp"
         android:layout_height="91dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_chainStyle="spread"
         app:srcCompat="@drawable/ic_sofa"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="78dp" />
+        tools:ignore="ContentDescription" />
 
     <RadioButton
         android:id="@+id/radioButton3"
         android:layout_width="63dp"
         android:layout_height="29dp"
         android:text="XL"
-        tools:layout_editor_absoluteX="201dp"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/radioButton"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Confirm" />
 
 </android.support.constraint.ConstraintLayout>
