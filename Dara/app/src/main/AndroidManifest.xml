@@ -48,10 +48,22 @@
         <activity android:name=".ProfileView" />
         <activity android:name=".profileSparse" />
         <activity android:name=".InitialOffer" />
-        <activity android:name=".NewTripActivity" />
+        <activity
+            android:name=".NewTripActivity"
+            android:label="New Trip Details" />
         <activity
             android:name=".StartingLocationActivity"
             android:label="Set Starting Location"
+            android:parentActivityName=".NewReqActivity"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.test.dara.NewReqActivity" />
+        </activity>
+        <activity android:name=".EndingLocationActivity" />
+        <activity
+            android:name=".DueDateActivity"
+            android:label="@string/title_activity_due_date"
             android:parentActivityName=".NewReqActivity"
             android:theme="@style/MyMaterialTheme">
             <meta-data

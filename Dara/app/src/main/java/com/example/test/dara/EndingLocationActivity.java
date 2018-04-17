@@ -8,19 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class StartingLocationActivity extends AppCompatActivity {
+public class EndingLocationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_starting_location);
+        setContentView(R.layout.activity_ending_location);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Make button lead back to the New Req interface
-        Button getAddress = findViewById(R.id.addressContinue);
+        Button getAddress = findViewById(R.id.EndingaddressContinue);
         getAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,16 +28,16 @@ public class StartingLocationActivity extends AppCompatActivity {
                 String addr1 = temp.getText().toString();
                 EditText temp2 = findViewById(R.id.EndingeditText13);
                 String city = temp2.getText().toString();
-                EditText temp3 = findViewById(R.id.editText8);
+                EditText temp3 = findViewById(R.id.EndingeditText8);
                 String state = temp3.getText().toString();
                 String address = addr1 + ", " + city + ", " + state;
                 if (address.length() > 35) address = address.substring(0, 32) + "...";
 
-                Intent myIntent = new Intent(StartingLocationActivity.this, NewReqActivity.class);
+                Intent myIntent = new Intent(EndingLocationActivity.this, NewReqActivity.class);
                 Bundle bundle = getIntent().getExtras();
-                bundle.putString("Pick-up Location", address);
+                bundle.putString("Drop-off Location", address);
                 myIntent.putExtras(bundle);
-                StartingLocationActivity.this.startActivity(myIntent);
+                EndingLocationActivity.this.startActivity(myIntent);
             }
         });
     }

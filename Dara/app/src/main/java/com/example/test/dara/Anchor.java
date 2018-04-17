@@ -34,8 +34,12 @@ public class Anchor extends AppCompatActivity {
         price_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO: Save priceBox.getText()
                 Intent myIntent = new Intent(Anchor.this, NewReqActivity.class);
+                Bundle bundle = getIntent().getExtras();
+                EditText temp = findViewById(R.id.editText6);
+                String offer = temp.getText().toString();
+                bundle.putString("Initial Offer", "$" + offer);
+                myIntent.putExtras(bundle);
                 Anchor.this.startActivity(myIntent);
             }});
 

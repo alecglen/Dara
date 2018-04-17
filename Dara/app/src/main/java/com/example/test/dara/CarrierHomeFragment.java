@@ -44,7 +44,13 @@ public class CarrierHomeFragment extends Fragment {
         });
 
         // Populate Requests list
-        ArrayList<String> trips = getArguments().getStringArrayList("trips");
+        Bundle bundle = getArguments();
+        ArrayList<String> trips;
+        if (bundle != null && bundle.containsKey("trips")) {
+            trips = getArguments().getStringArrayList("trips");
+        } else {
+            trips = new ArrayList<>(Collections.singleton("No trips yet!@@@Select New Trip to get started."));
+        }
         RequestsAdapter adapter = new RequestsAdapter(getActivity(), R.layout.job_lists, trips);
         ListView listView = view.findViewById(R.id.listView);
         listView.setAdapter(adapter);

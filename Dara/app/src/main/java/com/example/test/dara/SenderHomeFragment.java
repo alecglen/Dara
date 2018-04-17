@@ -37,16 +37,28 @@ public class SenderHomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(getActivity(), NewReqActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("Pick-up Location", "Not Set");
+                bundle.putString("Drop-off Location", "Not Set");
+                bundle.putString("Item Description", "Not Set");
+                bundle.putString("Initial Offer", "Not Set");
+                bundle.putString("Due Date", "Not Set");
+                myIntent.putExtras(bundle);
                 getActivity().startActivity(myIntent);
             }
         });
 
         // Populate Requests list
-        ArrayList<String> requests = getArguments().getStringArrayList("requests");
+        Bundle bundle = getArguments();
+        ArrayList<String> requests;
+        if (bundle != null && bundle.containsKey("requests")) {
+            requests = getArguments().getStringArrayList("requests");
+        } else {
+            requests = new ArrayList<>(Collections.singleton("No requests yet!@@@Select New Request to get started."));
+        }
         RequestsAdapter adapter = new RequestsAdapter(getActivity(), R.layout.job_lists, requests);
         ListView listView = view.findViewById(R.id.reqs_list);
         listView.setAdapter(adapter);
-
         return view;
     }
 
