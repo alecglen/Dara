@@ -34,7 +34,8 @@ public class NewReqActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Toast.makeText(NewReqActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+                    Intent myIntent = new Intent(NewReqActivity.this, StartingLocationActivity.class);
+                    NewReqActivity.this.startActivity(myIntent);
                 } else if (position == 1) {
                     Toast.makeText(NewReqActivity.this, "" + position, Toast.LENGTH_SHORT).show();
                 } else if (position == 2) {

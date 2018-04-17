@@ -47,8 +47,17 @@
         <activity android:name=".TutorialActivity" />
         <activity android:name=".ProfileView" />
         <activity android:name=".profileSparse" />
-        <activity android:name=".InitialOffer"></activity>
+        <activity android:name=".InitialOffer" />
         <activity android:name=".NewTripActivity" />
+        <activity
+            android:name=".StartingLocationActivity"
+            android:label="Set Starting Location"
+            android:parentActivityName=".NewReqActivity"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.test.dara.NewReqActivity" />
+        </activity>
     </application>
 
 </manifest>

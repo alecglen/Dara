@@ -13,6 +13,8 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="com.example.test.dara.NewReqActivity"
         android:paddingTop="?android:attr/actionBarSize"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         tools:showIn="@layout/activity_new_req">
 
         <RelativeLayout

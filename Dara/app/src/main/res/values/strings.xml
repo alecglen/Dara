@@ -78,4 +78,5 @@
     <string name="title_activity_anchor">Anchor</string>
     <string name="request_item_name">Item name</string>
     <string name="trip_name_hint">Trip nickname</string>
+    <string name="title_activity_starting_location">StartingLocationActivity</string>
 </resources>
