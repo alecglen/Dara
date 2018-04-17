@@ -33,12 +33,18 @@ public class CarrierHomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_carrier_home, container, false);
 
-        // Make button lead to the New Trip interface
+        // Make button lead to the New Request interface
         Button newReq = view.findViewById(R.id.new_trip_button);
         newReq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(getActivity(), NewTripActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("Starting Location", "Not Set");
+                bundle.putString("Destination", "Not Set");
+                bundle.putString("Cargo Capacity", "Not Set");
+                bundle.putString("Arrival Date", "Not Set");
+                myIntent.putExtras(bundle);
                 getActivity().startActivity(myIntent);
             }
         });

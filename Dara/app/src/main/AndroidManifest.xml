@@ -20,7 +20,8 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_home_screen">
+            android:label="@string/title_activity_home_screen"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,41 +35,102 @@
         <activity
             android:name=".NewReqActivity"
             android:label="@string/title_activity_new_req"
-            android:theme="@style/MyMaterialTheme" />
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".NegotiationActivity"
-            android:label="@string/title_activity_negotiation"
-            android:theme="@style/MyMaterialTheme" />
+            android:label="Negotiate a price"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".CargoSizeActivity" />
+        <activity android:name=".CapacityActivity" />
         <activity
             android:name=".Anchor"
-            android:label="@string/title_activity_anchor"
-            android:theme="@style/MyMaterialTheme" />
+            android:label="Set Offer Amount"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".TutorialActivity" />
         <activity android:name=".ProfileView" />
         <activity android:name=".profileSparse" />
         <activity android:name=".InitialOffer" />
         <activity
             android:name=".NewTripActivity"
-            android:label="New Trip Details" />
+            android:label="New Trip Details"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".StartingLocationActivity"
             android:label="Set Starting Location"
             android:parentActivityName=".NewReqActivity"
-            android:theme="@style/MyMaterialTheme">
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.test.dara.NewReqActivity" />
         </activity>
-        <activity android:name=".EndingLocationActivity" />
+        <activity
+            android:name=".TripStartActivity"
+            android:label="Set Starting Location"
+            android:parentActivityName=".NewTripActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.test.dara.NewTripActivity" />
+        </activity>
+        <activity
+            android:name=".EndingLocationActivity"
+            android:label="Set Delivery Address"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".TripEndActivity"
+            android:label="Set Destination"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".DueDateActivity"
-            android:label="@string/title_activity_due_date"
+            android:label="Select Due Date"
             android:parentActivityName=".NewReqActivity"
-            android:theme="@style/MyMaterialTheme">
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.test.dara.NewReqActivity" />
+        </activity>
+        <activity
+            android:name=".TravelDateActivity"
+            android:label="Select Travel Date"
+            android:parentActivityName=".NewTripActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.test.dara.NewTripActivity" />
+        </activity>
+        <activity
+            android:name=".RouteMapActivity"
+            android:label="Select senders on the map"
+            android:parentActivityName=".NewTripActivity"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.test.dara.NewTripActivity" />
+        </activity>
+        <activity
+            android:name=".PackageDataActivity"
+            android:label="@string/title_activity_package_data"
+            android:parentActivityName=".RouteMapActivity"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.test.dara.RouteMapActivity" />
+        </activity>
+        <activity
+            android:name=".CarrierDataActivity"
+            android:label="Review Carrier Details"
+            android:parentActivityName=".HomeScreenActivity"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.test.dara.HomeScreenActivity" />
         </activity>
     </application>
 

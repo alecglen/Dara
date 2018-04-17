@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -29,7 +30,7 @@ public class SenderHomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_sender_home, container, false);
+        final View view = inflater.inflate(R.layout.fragment_sender_home, container, false);
 
         // Make button lead to the New Request interface
         Button newReq = view.findViewById(R.id.new_req_button);
@@ -49,7 +50,7 @@ public class SenderHomeFragment extends Fragment {
         });
 
         // Populate Requests list
-        Bundle bundle = getArguments();
+        final Bundle bundle = getArguments();
         ArrayList<String> requests;
         if (bundle != null && bundle.containsKey("requests")) {
             requests = getArguments().getStringArrayList("requests");
@@ -59,6 +60,22 @@ public class SenderHomeFragment extends Fragment {
         RequestsAdapter adapter = new RequestsAdapter(getActivity(), R.layout.job_lists, requests);
         ListView listView = view.findViewById(R.id.reqs_list);
         listView.setAdapter(adapter);
+
+        // Set ListView clickListeners
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (bundle != null && bundle.containsKey("requests")) {
+                    ArrayList<String> requests2 = getArguments().getStringArrayList("requests");
+                    if (requests2.get(0).substring(0, 2) != "No") {
+                        Intent myIntent = new Intent(getActivity(), CarrierDataActivity.class);
+                        myIntent.putExtras(bundle);
+                        getActivity().startActivity(myIntent);
+                    }
+                }
+            }
+        });
+
         return view;
     }
 
