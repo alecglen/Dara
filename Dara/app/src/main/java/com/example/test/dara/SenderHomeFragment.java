@@ -42,8 +42,8 @@ public class SenderHomeFragment extends Fragment {
         });
 
         // Populate Requests list
-        ArrayList<String> requests = new ArrayList<>(Collections.singleton("No requests yet!@@@Select New Request to get started."));
-        RequestsAdapter adapter = new RequestsAdapter(getActivity(),R.layout.job_lists,requests);
+        ArrayList<String> requests = getArguments().getStringArrayList("requests");
+        RequestsAdapter adapter = new RequestsAdapter(getActivity(), R.layout.job_lists, requests);
         ListView listView = view.findViewById(R.id.reqs_list);
         listView.setAdapter(adapter);
 

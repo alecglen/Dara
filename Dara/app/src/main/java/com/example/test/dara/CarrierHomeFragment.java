@@ -44,8 +44,8 @@ public class CarrierHomeFragment extends Fragment {
         });
 
         // Populate Requests list
-        ArrayList<String> requests = new ArrayList<String>(Collections.singleton("No trips yet!@@@Select New Trip to get started."));
-        RequestsAdapter adapter = new RequestsAdapter(getActivity(), R.layout.job_lists, requests);
+        ArrayList<String> trips = getArguments().getStringArrayList("trips");
+        RequestsAdapter adapter = new RequestsAdapter(getActivity(), R.layout.job_lists, trips);
         ListView listView = view.findViewById(R.id.listView);
         listView.setAdapter(adapter);
 

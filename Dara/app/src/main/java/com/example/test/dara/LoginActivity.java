@@ -37,6 +37,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
@@ -111,6 +112,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(LoginActivity.this, TutorialActivity.class);
+                Bundle bundle = new Bundle();
+                ArrayList<String> requests = new ArrayList<>(Collections.singleton("No requests yet!@@@Select New Request to get started."));
+                ArrayList<String> trips = new ArrayList<>(Collections.singleton("No trips yet!@@@Select New Trip to get started."));
+                bundle.putStringArrayList("requests",requests);
+                bundle.putStringArrayList("trips", trips);
+                myIntent.putExtras(bundle);
                 LoginActivity.this.startActivity(myIntent);
 
             }});
