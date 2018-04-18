@@ -37,6 +37,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
@@ -111,6 +112,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(LoginActivity.this, TutorialActivity.class);
+                Bundle bundle = new Bundle();
+                ArrayList<String> requests = new ArrayList<>(Collections.singleton("No requests yet!@@@Select New Request to get started."));
+                ArrayList<String> trips = new ArrayList<>(Collections.singleton("No trips yet!@@@Select New Trip to get started."));
+                bundle.putStringArrayList("requests",requests);
+                bundle.putStringArrayList("trips", trips);
+                myIntent.putExtras(bundle);
                 LoginActivity.this.startActivity(myIntent);
 
             }});
@@ -348,7 +355,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                 // getting product details by making HTTP request
                 // Note that product details url will use GET request
-                String url_get_user = "http://10.26.195.27/android_connect/get_user_row.php";
+                String url_get_user = "http://10.29.189.43/android_connect/get_user_row.php";
                 JSONObject json = jParser.makeHttpRequest(url_get_user, "GET", jparams);
 
                 // check your log for json response

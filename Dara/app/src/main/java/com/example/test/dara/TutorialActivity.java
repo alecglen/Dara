@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TutorialActivity extends AppCompatActivity {
@@ -32,8 +33,13 @@ public class TutorialActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(TutorialActivity.this, HomeScreenActivity.class);
+                Bundle bundle = new Bundle();
+                ArrayList<String> requests = new ArrayList<>(Collections.singleton("No requests yet!@@@Select New Request to get started."));
+                ArrayList<String> trips = new ArrayList<>(Collections.singleton("No trips yet!@@@Select New Trip to get started."));
+                bundle.putStringArrayList("requests",requests);
+                bundle.putStringArrayList("trips", trips);
+                myIntent.putExtras(bundle);
                 TutorialActivity.this.startActivity(myIntent);
-
             }});
     }
 

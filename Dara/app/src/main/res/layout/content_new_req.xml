@@ -10,15 +10,17 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingTop="?android:attr/actionBarSize"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="com.example.test.dara.NewReqActivity"
-        android:paddingTop="?android:attr/actionBarSize"
         tools:showIn="@layout/activity_new_req">
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/com_facebook_profilepictureview_preset_size_normal"
+            android:layout_height="100dp"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
@@ -29,16 +31,16 @@
                 android:id="@+id/ItemImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_alignEnd="@+id/itemTitle"
-                android:layout_alignLeft="@+id/itemTitle"
-                android:layout_alignRight="@+id/itemTitle"
-                android:layout_alignStart="@+id/itemTitle"
+                android:layout_alignEnd="@+id/uploadImage"
+                android:layout_alignLeft="@+id/uploadImage"
+                android:layout_alignRight="@+id/uploadImage"
+                android:layout_alignStart="@+id/uploadImage"
                 android:contentDescription="@string/profile_img"
                 app:srcCompat="@android:drawable/ic_menu_upload"
-                tools:layout_alignEnd="@+id/itemTitle" />
+                tools:layout_alignEnd="@+id/uploadImage" />
 
             <TextView
-                android:id="@+id/itemTitle"
+                android:id="@+id/uploadImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -55,32 +57,51 @@
         </RelativeLayout>
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/itemTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
             android:ems="10"
-            android:hint="@string/request_item_name"
-            android:inputType="textPersonName"
+            android:hint="Item Name"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords|textPersonName"
             app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/relativeLayout" />
 
         <ListView
             android:id="@+id/listView2"
-            android:layout_width="352dp"
-            android:layout_height="363dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/newReqSubmit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+        <Button
+            android:id="@+id/newReqSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 

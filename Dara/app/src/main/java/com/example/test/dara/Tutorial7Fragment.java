@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,6 +36,12 @@ public class Tutorial7Fragment extends Fragment {
                                        @Override
                                        public void onClick(View view) {
                                            Intent myIntent = new Intent(getActivity(), HomeScreenActivity.class);
+                                           Bundle bundle = new Bundle();
+                                           ArrayList<String> requests = new ArrayList<>(Collections.singleton("No requests yet!@@@Select New Request to get started."));
+                                           ArrayList<String> trips = new ArrayList<>(Collections.singleton("No trips yet!@@@Select New Trip to get started."));
+                                           bundle.putStringArrayList("requests",requests);
+                                           bundle.putStringArrayList("trips", trips);
+                                           myIntent.putExtras(bundle);
                                            getActivity().startActivity(myIntent);
                                        }
                                    });

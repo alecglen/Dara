@@ -31,7 +31,7 @@ public class HomeScreenActivity extends AppCompatActivity {
 
         // Setting up pager between tab fragments
         ViewPager pager = findViewById(R.id.container);
-        setupPager(pager);
+        setupPager(pager, getIntent().getExtras());
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(pager);
 
@@ -73,10 +73,14 @@ public class HomeScreenActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void setupPager(ViewPager pager) {
+    private void setupPager(ViewPager pager, Bundle bundle) {
         RolePageAdapter adapter = new RolePageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new SenderHomeFragment(), "Sender");
-        adapter.addFragment(new CarrierHomeFragment(), "Carrier");
+        SenderHomeFragment senderTab = new SenderHomeFragment();
+        CarrierHomeFragment carrierTab = new CarrierHomeFragment();
+        senderTab.setArguments(bundle);
+        carrierTab.setArguments(bundle);
+        adapter.addFragment(senderTab, "Sender");
+        adapter.addFragment(carrierTab, "Carrier");
         pager.setAdapter(adapter);
     }
 }
