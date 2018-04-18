@@ -137,11 +137,4 @@
         app:srcCompat="@drawable/btn_google_dark_focus"
         tools:layout_editor_absoluteY="69dp" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="255dp" />
-
 </android.support.constraint.ConstraintLayout>
