@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Anchor">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/actionBarSize"
+        tools:context=".CapacityActivity">
+
+
+        <ImageButton
+            android:id="@+id/carriercellButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/carriertextView13"
+            app:srcCompat="@drawable/cellphone" />
+
+        <ImageButton
+            android:id="@+id/carrierlaptopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/carriercellButton"
+            app:layout_constraintStart_toStartOf="@+id/carriercellButton"
+            app:layout_constraintTop_toBottomOf="@+id/carriercellButton"
+            app:srcCompat="@drawable/laptop" />
+
+        <ImageButton
+            android:id="@+id/carriertvButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/carrierlaptopButton"
+            app:layout_constraintStart_toStartOf="@+id/carrierlaptopButton"
+            app:layout_constraintTop_toBottomOf="@+id/carrierlaptopButton"
+            app:srcCompat="@drawable/tv" />
+
+        <ImageButton
+            android:id="@+id/carriercouchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/carriertvButton"
+            app:layout_constraintStart_toStartOf="@+id/carriertvButton"
+            app:layout_constraintTop_toBottomOf="@+id/carriertvButton"
+            app:srcCompat="@drawable/couch" />
+
+        <ImageButton
+            android:id="@+id/carrierbikeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/carriercouchButton"
+            app:layout_constraintStart_toStartOf="@+id/carriercouchButton"
+            app:layout_constraintTop_toBottomOf="@+id/carriercouchButton"
+            app:srcCompat="@drawable/motorcycle" />
+
+        <ImageButton
+            android:id="@+id/carrierpawButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/carrierbikeButton"
+            app:layout_constraintStart_toStartOf="@+id/carrierbikeButton"
+            app:layout_constraintTop_toBottomOf="@+id/carrierbikeButton"
+            app:srcCompat="@drawable/paw" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Fits in your hand"
+            app:layout_constraintBottom_toBottomOf="@+id/carriercellButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/carriercellButton"
+            app:layout_constraintTop_toTopOf="@+id/carriercellButton" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Fits in a front seat"
+            app:layout_constraintBottom_toBottomOf="@+id/carrierlaptopButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/carrierlaptopButton"
+            app:layout_constraintTop_toTopOf="@+id/carrierlaptopButton" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Fits in a back seat"
+            app:layout_constraintBottom_toBottomOf="@+id/carriertvButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/carriertvButton"
+            app:layout_constraintTop_toTopOf="@+id/carriertvButton" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Fits in a pickup truck"
+            app:layout_constraintBottom_toBottomOf="@+id/carriercouchButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/carriercouchButton"
+            app:layout_constraintTop_toTopOf="@+id/carriercouchButton" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Needs a trailer"
+            app:layout_constraintBottom_toBottomOf="@+id/carrierbikeButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/carrierbikeButton"
+            app:layout_constraintTop_toTopOf="@+id/carrierbikeButton" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Your pet (crated)"
+            app:layout_constraintBottom_toBottomOf="@+id/carrierpawButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/carrierpawButton"
+            app:layout_constraintTop_toTopOf="@+id/carrierpawButton" />
+
+        <TextView
+            android:id="@+id/carriertextView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="How much room do you have?"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Dara</string>
+
+    <!-- Strings related to Home Screen -->
+    <string name="title_activity_home_screen">Dara 1</string>
+    <string name="tab_text_1">Sender</string>
+    <string name="tab_text_2">Carrier</string>
+    <string name="button_sender_home">New Request</string>
+    <string name="button_carrier_home">New Trip</string>
+    <string name="requests_label">My Requests</string>
+    <string name="trips_label">My Trips</string>
+    <string name="empty_reqs">No Requests Yet!</string>
+
+    <!-- Strings for Hamburger Menu -->
+    <string name="new_request">New request</string>
+    <string name="new_trip">New trip</string>
+    <string name="notifications">Notifications</string>
+    <string name="become_a_carrier">Become a Carrier</string>
+    <string name="payment">Payment</string>
+    <string name="review">Reviews</string>
+    <string name="help">Help</string>
+    <string name="legal">Legal</string>
+    <string name="logout">Log out</string>
+    <string name="profile_content_descr">Profile Image</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."</string>
+    <string name="facebook_app_id">1120060238165241</string>
+    <string name="fb_login_protocol_scheme">fb1120060238165241</string>
+    <string name="logo_content">Dara logo</string>
+    <string name="login_or">or sign in with</string>
+    <string name="login_google">google</string>
+    <string name="new_user">New user? Sign up here.</string>
+    <string name="title">Title</string>
+    <string name="profile_img">Profile Image</string>
+    <string name="img_upload">Upload Image</string>
+    <string name="title_activity_new_req">New Request</string>
+    <string name="title_activity_create_account">Sign in</string>
+    <string name="Register">Register</string>
+    <string name="Name">Name</string>
+    <string name="join_us">Join Us!</string>
+    <string name="title_activity_cargo_size">CargoSize</string>
+    <string name="title_activity_cargo_size_b">CargoSizeB</string>
+    <string name="title_activity_negotiation">NegotiationActivity</string>
+
+    <!-- Strings for Negotiation -->
+    <string name="current_offer">CurrentOffer</string>
+    <string name="second_most_recent_offer">2nd Recent Offer</string>
+    <string name="third_most_recent_offer">3rd Recent Offer</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="skipbutton">Skip</string>
+
+    <!-- Strings for Tutorial -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Tutorial_1_text">What is Dara?\n\nDara is a peer-to-peer shipping service.</string>
+    <string name="Tutorial_2_text">Dara pairs senders with others traveling to the delivery location.</string>
+    <string name="tut2_image_text">tutorial 2 image</string>
+    <string name="Tutorial_3_text">As a sender, Dara will find you verified carriers based on your item\'s size and delivery date.</string>
+    <string name="Tutorial_4_text">As a carrier, you can select parcels to deliver based on your travel itinerary.</string>
+    <string name="Tutorial_5_text">Dara will match you with verified users…</string>
+    <string name="Tutorial_6_text">…and help you come to a fair delivery cost!</string>
+    <string name="Tutorial_7_text">Stay connected during delivery with in-app messaging and check-ins.</string>
+    <string name="TutorialEndButtonText">Let\'s get started!</string>
+    <string name="title_activity_anchor">Anchor</string>
+    <string name="request_item_name">Item name</string>
+    <string name="trip_name_hint">Trip nickname</string>
+    <string name="title_activity_starting_location">StartingLocationActivity</string>
+    <string name="title_activity_due_date">DueDateActivity</string>
+    <string name="title_activity_route_map">RouteMapActivity</string>
+    <string name="title_activity_package_data">PackageDataActivity</string>
+</resources>
